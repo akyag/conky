@@ -21,10 +21,10 @@ conky.config = {
     -- Placement (For SINGLE monitor users!)
 	alignment = 'top_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 	gap_x = 30,								-- pixels between right or left border
-	gap_y = 660,								-- pixels between bottom or left border
+	gap_y = 665,								-- pixels between bottom or left border
 
     -- Size
-    minimum_height = 110,						-- minimum height of window
+    minimum_height = 125,						-- minimum height of window
 	minimum_width = 240,						-- minimum width of window
 	maximum_width = 260,						-- maximum width of window
 

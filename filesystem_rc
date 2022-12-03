@@ -24,7 +24,7 @@ conky.config = {
 	gap_y = 580,								-- pixels between bottom or left border
 
     -- Size
-    minimum_height = 110,						-- minimum height of window
+    minimum_height = 210,						-- minimum height of window
 	minimum_width = 240,						-- minimum width of window
 	maximum_width = 260,						-- maximum width of window
 
@@ -87,10 +87,10 @@ conky.config = {
 
 conky.text = [[
 ${font5}${color6}${color}${font}${offset 20}${color1}${font2}${color1}FILESYSTEM ${color2} ${hr 2}
-${voffset 20}${color3}${font}|__Home: ${goto 100}${color1}${font}${fs_free /home} / ${color5}${fs_size /home} ${alignr}${color1}${fs_used_perc /home}%
+${voffset 10}${color3}${font}|__Home: ${goto 100}${color1}${font}${fs_free /home} / ${color5}${fs_size /home} ${alignr}${color1}${fs_used_perc /home}%
 ${color3}${font}|__Entmt: ${goto 100}${color1}${font}${fs_free /mnt/entmt} / ${color5}${fs_size /mnt/entmt}${alignr}${color1}${fs_used_perc /mnt/entmt}%
 ${color3}${font}|__Data: ${goto 100}${color1}${font}${fs_free /mnt/data} / ${color5}${fs_size /mnt/data}${alignr}${color1}${fs_used_perc /mnt/data}%
 ${color3}${font}|__Movies: ${goto 100}${color1}${font} ${fs_free /mnt/movies} / ${color5}${fs_size /mnt/movies}${alignr}${color1}${fs_used_perc /mnt/movies}%
 ${voffset 20}${font5}${color6}${color}${font}${offset 20}${color1}${font2}EXTERNAL ${color2} ${hr 2}
-${voffset 20}${color3}${font}|__Backup: ${goto 100}${color1}${font} ${fs_free /run/media/akya/backup} / ${color5}${fs_size /run/media/akya/backup}${alignr}${color1}${fs_used_perc /run/media/akya/backup}%
+${voffset 10}${color3}${font}|__Backup: ${goto 100}${color1}${font} ${fs_free /run/media/akya/backup} / ${color5}${fs_size /run/media/akya/backup}${alignr}${color1}${fs_used_perc /run/media/akya/backup}%
 ${color3}${font}|__Dump: ${goto 100}${color1}${font} ${fs_free /run/media/akya/dump} / ${color5}${fs_size /run/media/akya/dump}${alignr}${color1}${fs_used_perc /run/media/akya/dump}%]];
