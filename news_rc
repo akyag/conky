@@ -1,0 +1,50 @@
+conky.config = {
+	background = false,
+	font = 'SF Pro Text:size=10',
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 1,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'normal',
+	--own_window_transparent yes
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 180,
+	own_window_colour = '#000000',
+	double_buffer = true,
+	minimum_width = 505,
+	maximum_width = 505,
+	minimum_height = 120,
+	--maximum_size 220
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_color = '#101010',
+	default_shade_color = '#101010',
+	alignment = 'top_right',
+	gap_x = 40,--320
+	gap_y = 810,--530
+	no_buffers = true,
+	cpu_avg_samples = 1,
+	uppercase = false,
+	border_inner_margin = 15,
+	default_bar_width = 144, default_bar_height = 6,
+
+--colors
+	color0 = '#bbb',
+	color1 = '#aaa',
+	--color1 = '#16A085',
+	color2 = '#9766a8',
+	color3 = '#aaa',
+
+};
+
+conky.text = [[
+${color1}${font SF Pro Display:size=10:bold}NEWS ${color2} ${hr 2}
+${color3}${font SF Pro Text:size=10}
+${rss http://feeds.bbci.co.uk/news/rss.xml 1 item_titles 5}
+${hr 1}
+${rss http://feeds.bbci.co.uk/news/technology/rss.xml 1 item_titles 5}
+]];

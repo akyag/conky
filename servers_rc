@@ -1,0 +1,50 @@
+conky.config = {
+	background = false,
+	font = 'SF Pro Text:size=10',
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 1,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type  = 'normal',
+	--own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 180,
+	own_window_colour = '#000000',
+	double_buffer = true,
+	minimum_width = 225,
+	minimum_height = 100,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_color = '#101010',
+	default_shade_color = '#101010',
+	alignment = 'top_right',
+	gap_x = 40,--320
+	gap_y = 660,--383
+	no_buffers = true,
+	cpu_avg_samples = 1,
+	uppercase = false,
+	border_inner_margin = 15,
+	if_up_strictness = 'link',
+
+--colors
+	color0 = '#603d73',
+	color1 = '#aaa',
+	--color1 = '#16A085',
+	color2 = '#aaa',
+	color3 = '#9766a8',
+	color4 = '#ff0000',
+	color5 = '#9ece6a',
+
+};
+
+conky.text = [[
+${color1}${font SF Pro Display:size=10:bold}SERVERS ${color3} ${hr 2}
+
+${color3}${font SF Pro Text:size=10}Sites:
+  ${color3}|__${color1}Weboreviews: ${if_match "${texeci 3600 curl -s -o /dev/null -w "%{http_code}" -LI https://weboreviews.com}"=="200"}${alignr}${color5}Online${else}${alignr}${color4}Offline${endif}${color0}${font}
+  ${color3}|__${color1}ThePirateBay: ${if_match "${texeci 3600 curl -s -o /dev/null -w "%{http_code}" -LI https://thepiratebay.org/index.html}"=="200"}${alignr}${color5}Online${else}${alignr}${color4}Offline${endif}${color1}${font}]];
