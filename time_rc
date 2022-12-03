@@ -52,7 +52,7 @@ conky.config = {
 	font2 = 'SF Pro Display:size=10:bold',         	-- font for the time
 	font3 = 'SF Pro Rounded:pixelsize=70',               	-- font for the date
 	font4 = 'Inter:bold:size=12',              -- font for the keybindings heading
-	font5 = 'FiraCode Nerd Font:size=22',	-- font for icons.
+	font5 = 'FiraCode Nerd Font:size=18',	-- font for icons.
 	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
 	max_user_text = 16384,						-- max text in conky default 16384
 	override_utf8_locale = true,				-- force UTF8 requires xft
@@ -86,7 +86,7 @@ conky.config = {
 };
 
 conky.text = [[
-${font5}${color6}${color}${font}${offset 10}${font2}${color1}TIME ${color}${font}${color6}${hr 2}
+${font5}${color6}${color}${font}${offset 20}${font2}${color1}TIME ${color}${font}${color2}${hr 2}
 ${color3}${font3}${alignr}${time %I:%M}${font}
-${voffset 15}${color1}${font4}${alignr}${time %A %d %b %Y}${font}
+${voffset 20}${color1}${font4}${alignr}${time %A %d %b %Y}${font}
 ]];

@@ -1,55 +1,95 @@
 conky.config = {
-	background = false,
-	font = 'SF Pro Text:size=10',
-	use_xft = true,
-	xftalpha = 0.9,
-	update_interval = 1,
-	imlib_cache_size = 0,
-	total_run_times = 0,
-	own_window = true,
-	own_window_type  = 'normal',
-	--own_window_transparent = true,
-	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-	own_window_argb_visual = true,
-	own_window_argb_value = 180,
-	own_window_colour = '#000000',
-	double_buffer = true,
-	minimum_width = 225,
-	minimum_height = 100,
-	draw_shades = false,
-	draw_outline = false,
-	draw_borders = false,
-	draw_graph_borders = true,
-	default_color = '#101010',
-	default_shade_color = '#101010',
-	alignment = 'top_right',
-	gap_x = 320,--320
-	gap_y = 382,--383
-	no_buffers = true,
-	cpu_avg_samples = 1,
-	uppercase = false,
-	border_inner_margin = 15,
-	if_up_strictness = 'link',
 
---colors
-	color0 = '#aaa',
-	color1 = '#aaa',
-	--color1 = '#16A085',
-	color2 = '#9766a8',
-	color3 = '#603d73',
+	--Various settings
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
 
+	-- Placement (Conky on MIDDLE of THREE monitors at 1920x1080)
+	--alignment = 'top_left',		                -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+	--gap_x = 3540,                               -- pixels between right or left border
+	--gap_y = 70,									-- pixels between bottom or left border
+
+    -- Placement (For SINGLE monitor users!)
+	alignment = 'top_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+	gap_x = 310,								-- pixels between right or left border
+	gap_y = 395,								-- pixels between bottom or left border
+
+    -- Size
+    minimum_height = 110,						-- minimum height of window
+	minimum_width = 240,						-- minimum width of window
+	maximum_width = 260,						-- maximum width of window
+
+	--Graphical
+	border_inner_margin = 5, 					-- margin between border and text
+	border_outer_margin = 5, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 260,					-- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+
+	--Textual
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font  = 'SF Pro Text:size=10',  	-- the default font used
+	font2 = 'SF Pro Display:size=10:bold',         	-- font for the time
+	font3 = 'SF Pro Rounded:pixelsize=70',               	-- font for the date
+	font4 = 'Inter:bold:size=12',              -- font for the keybindings heading
+	font5 = 'FiraCode Nerd Font:size=18',	-- font for icons.
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+
+	--Windows
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 180,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#1e1e2e',				-- set colour if own_window_transparent no
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'conky',			-- set the name manually
+	own_window_type = 'normal',				-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+
+	--catppuccin
+	color0 = '#C9CBFF',
+	color1 = '#D9E0EE',
+	color2 = '#89DCEB',
+	color3 = '#F2CDCD',
+	color4 = '#C3BAC6',
+    color5 = '#ABE9B3',
+    color6 = '#FAE3B0',
 };
 
 conky.text = [[
-${color1}${font SF Pro Display:size=10:bold}NETWORK ${color2} ${hr 2}
+${font5}${color6}${color}${font}${offset 20}${color1}${font2}NETWORK ${color2} ${hr 2}
 ${if_up enp1s0}
-${color2}${font SF Pro Text:size=10}Down: ${color1}${downspeed enp1s0}/s ${color2}${alignr}Up: ${color1}${upspeed enp1s0} /s
-${color1}${color1}${downspeedgraph enp1s0 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp1s0 20,90 444444 eeeeee}
-${color2}  Total: ${color1}${totaldown enp1s0} ${color2}${alignr}Total: ${color1}${totalup enp1s0}
-#${else}${if_up enp1s0}
-#${color2}${font SF Pro Text:size=10}Down: ${downspeed enp1s0}/s ${alignr}Up: ${upspeed enp1s0} /s
-#${color1}${downspeedgraph enp1s0 20,90 444444 eeeeee} ${alignr}${color1}${upspeedgraph enp1s0 20,90 444444 eeeeee}
-#${color2}  Total: ${totaldown enp1s0} ${alignr}Total: ${totalup enp1s0}
-
-${color2}${font SF Pro Text:size=10}IP: ${color1}${texeci 60 curl -s https://api.myip.com | jq -r .ip | cut -c 1-14 } | ${color1}${texeci 60 curl -s https://api.myip.com | jq -r .country }
+${color2}${font}Down: ${color1}${downspeed enp1s0}/s ${color2}${alignr}Up: ${color1}${upspeed enp1s0} /s
+${color5}${downspeedgraph enp1s0 20,90} ${alignr}${color5}${upspeedgraph enp1s0 20,90}
+${color2}Total: ${color1}${totaldown enp1s0} ${color2}${alignr}Total: ${color1}${totalup enp1s0}
+${voffset 10}${color3}${font}IP: ${color1}${texeci 60 curl -s https://api.myip.com | jq -r .ip | cut -c 1-14 } | ${color1}${texeci 60 curl -s https://api.myip.com | jq -r .country }
 ${endif}]];
