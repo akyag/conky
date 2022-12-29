@@ -91,16 +91,14 @@ ${voffset 20}${color5}${font4}Google Drive:
 ${color3}${font}akyabackup1: ${goto 110}${color1}${texeci 3600 rclone lsl akyabackup1:updated | cut -c 11-29}
 ${color3}akyabackup2: ${goto 110}${color1}${texeci 3600 rclone lsl akyabackup2:updated | cut -c 11-29}
 ${voffset 20}${color5}${font4}Mega:
-${color3}${font}Mega: ${goto 110}${color1}${texeci 3600 rclone lsl Mega:borg/updated | cut -c 11-29}
-${color3}Mega2: ${goto 110}${color1}${texeci 3600 rclone lsl Mega2:borg/updated | cut -c 11-29}
+${color3}${font}Mega: ${goto 110}${color1}${texeci 3600 rclone lsl Mega:updated | cut -c 11-29}
+${color3}Mega2: ${goto 110}${color1}${texeci 3600 rclone lsl Mega2:updated | cut -c 11-29}
 ${voffset 20}${color5}${font4}Other:
-${color3}${font}Dropbox: ${goto 110}${color1}${texeci 3600 rclone lsl Dropbox:borg/updated | cut -c 11-29}
-${color3}Backblaze: ${goto 110}${color1}${texeci 3600 rclone lsl Backblaze:borg-akya/updated | cut -c 11-29}
-${color3}Koofr: ${goto 110}${color1}${texeci 3600 rclone lsl Koofr:borg/updated | cut -c 11-29}
-${color3}STORJ: ${goto 110}${color1}${texeci 3600 rclone lsl Storj:borg/updated | cut -c 11-29}
+${color3}${font}Dropbox: ${goto 110}${color1}${texeci 3600 rclone lsl Dropbox:updated | cut -c 11-29}
+${color3}Backblaze: ${goto 110}${color1}${texeci 3600 rclone lsl Backblaze:kopia-akya/updated | cut -c 11-29}
+${color3}Koofr: ${goto 110}${color1}${texeci 3600 rclone lsl Koofr:updated | cut -c 11-29}
+${color3}STORJ: ${goto 110}${color1}${texeci 3600 rclone lsl StorjS3:bupstash/updated | cut -c 11-29}
 ${voffset 20}${color5}${font4}External drive:
-${color3}${font}Rsync status: ${goto 110}${color1}${texeci 3600 stat -c %y /run/media/akya/backup/borg/updated | cut -c 1-19}
+${color3}${font}Repo sync: ${goto 110}${color1}${texeci 3600 stat -c %y /home/akya/code/bupstash/updated | cut -c 1-19}
 
 ]];
--- -- ${color2}Mega: ${goto 110}${color1}${texeci 3600 stat -c %y /media/data/downloads/mega/Uploads/updated | cut -c 1-19}
-

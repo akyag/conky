@@ -87,5 +87,8 @@ conky.config = {
 
 conky.text = [[
 ${font5}${color6}${color}${font}${offset 10}${color1}${font2}MEMORY ${color2} ${hr 2}
-${voffset 20}${color3}${font}Ram: ${color1}${memperc}% ${alignr}${color5}${membar 5,140}
-${voffset 20}${color1}${font}${alignc 49}${mem} ${color3}/ ${memmax}]];
+${voffset 20}${color3}${font}RAM: ${color1}${memperc}% ${alignr}${color5}${membar 5,140}
+${voffset 00}${color1}${font}${alignr}${mem} ${color3}/ ${memmax}
+${voffset 00}${color3}${font}SWAP: ${color1}${swapperc}% ${alignr}${color5}${swapbar 5,140}
+${voffset 00}${color1}${font}${alignr}${swap} ${color3}/ ${swapmax}
+]];
