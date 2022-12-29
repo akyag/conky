@@ -12,7 +12,4 @@ conky -dq -c ~/.conky/cards/network_rc
 conky -dq -c ~/.conky/cards/servers_rc
 conky -dq -c ~/.conky/cards/news_rc
 conky -dq -c ~/.conky/cards/backup_rc
-# gsettings reset org.gnome.desktop.wm.keybindings switch-applications
-# gsettings reset org.gnome.desktop.wm.keybindings switch-applications-backward
-# gsettings reset org.gnome.desktop.wm.keybindings switch-group
-# gsettings reset org.gnome.desktop.wm.keybindings switch-group-backward
+
